@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(230, 232, 233);
+}
+
+/* header section */
+
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 7rem;
+    background-color: hsl(55, 5%, 59%);
+    z-index: 100;
+    border: 1px solid hsl(113, 7%, 24%);
+}
+
+h1 a {
+    font-size: 3rem;
+    padding: 0.5rem;
+    color:hsl(55, 23%, 63%);
+    text-shadow: 2px 3px 3px dimgray;
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+header ul li {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+li a {
+    text-decoration: none;
+    color: hsl(55, 35%, 70%);
+    text-shadow: 1px 2px 2px dimgray;
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+li a:hover {
+    color: hsl(109, 15%, 36%);
+    font-weight: 700;
+    text-shadow: 1px 2px 2px white;
+}
+
+@media only screen and (min-width:320px) and (max-width:850px) {
+    header h1 {
+        display: none;
+    }
+    header ul {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    header {
+        height: 3rem;
+    }
+    li a {
+        font-size: 1.25rem;
+    }
+}
+
+/* Banner section */
+
+main {
+    position: relative;
+}
+
+.banner {
+    background-image: url('Vision.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background-color: hsl(55, 5%, 59%);
+}
+
+@media only screen and (min-width:320px) and (max-width:850px) {
+    .main {
+        position: relative;
+        top: 0rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    color: hsl(109, 15%, 36%);
+    text-shadow: 0px 1px 1px dimgray;
+    font-weight: 700;
+    font-family: "Lato";
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.banner h3 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: "Lato";
+    margin: 1rem;
+    color: hsl(47, 15%, 25%)
+}
+
+.content button {
+    background-color: hsl(55, 35%, 70%);
+    border-radius: .2rem;
+    padding: .3rem;
+    margin-bottom: 0.5rem;
+}
+
+.content {
+    background-color: rgba(245, 245, 245, 0.963);
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+@media only screen and (min-width:320px) and (max-width:850px) {
+    .box .content {
+        display: none;
+    }
+}
+
+/* Services section */
+
+.services {
+    display: flex;
+    justify-content: center;
+}
+
+.overview p {
+    max-width: 35rem;
+    min-width: 15rem;
+}
+
+p {
+    font-family: "Lato";
+    line-height: 1.4;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: hsl(48, 9%, 23%);
+    font-weight: 350;
+}
+
+@media only screen and (max-width: 655px) {
+    .overview p, { 
+        max-width: 25rem;
+    }
+}
+
+/* grid section */ 
+.gridish {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.service {
+    width: 20rem;
+    margin: 0.25rem;
+    height: 20rem;
+    border: 1px solid rgb(214, 206, 206);
+    padding: 0.5rem;
+    background-color:hsl(55, 35%, 70%);
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 655px) {
+    .gridish {
+        display: grid;
+        grid-template: 90% / repeat (5, 1fr);
+        padding-right: 1rem;
+        justify-items: center;
+    }
+    .service {
+        width: 80%;
+        height: 20rem;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: 15rem;
+    }
+
+}
+
+.gridish h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    margin-bottom: 1rem;
+    color: hsl(47, 15%, 25%)
+}
+
+.gridish p{
+    font-size: 0.875rem;
+    font-family: "Open Sans";
+    max-width: 35rem;
+    min-width: 15rem;
+    color: hsl(47, 15%, 25%)
+}
+
+@media only screen and (max-width: 655px) {
+    .overview {
+        max-width: 25rem;
+    }
+}
+
+.image-container {
+    display: grid;
+    justify-content: center;
+    align-content: end;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 10rem;
+    z-index: 5;
+}
+
+/* team section */
+
+.team {
+    display: flex;
+    justify-content: center;
+}
+
+.about p {
+    max-width: 35rem;
+    min-width: 15rem;
+}
+
+@media only screen and (max-width: 655px) {
+    .about {
+        max-width: 25rem;
+    }
+}
+
+/* image section */ 
+
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    background-image: url(background.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.person {
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
+
+.person .image-container img {
+    max-width: 100%;
+    height: 12.5rem;
+    z-index: 5;
+}
+
+.person h3 {
+    background-color: hsl(55, 5%, 59%);
+    color: whitesmoke;
+    padding: 0.5rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    text-align: center;
+}
+/* contact section */
+
+.contact {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.contact h4 {
+    font-size: 1rem;
+    font-family: "Open Sans";
+    color: hsl(47, 15%, 25%);
+    font-weight: 600;
+}
+
+.heading, .contact h4 {
+    text-align: center;
+}
+
+/* footer */
+
+.footernew {
+    background-color: hsl(55, 5%, 59%);
+    text-align: center;
+    margin-top: 2rem;
+}
+.footernew p {
+    font-family: "Lato";
+    font-size: 0.7rem;
+    padding: 1rem;
+    color: whitesmoke;
+}
